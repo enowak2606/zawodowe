@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cmath>
+#include <cstdio>
+ 
+using namespace std;
+ 
+int main() {
+    int zmienna;
+    while(true) {
+
+        cout << "Wybierz Funkcje" << endl;
+        cout << endl;
+        cout << "1... Centymetry na Cale" << endl;
+        cout << "2... Metry na Stopy" << endl;
+        cout << "3... Kilometry na Stopy" << endl;
+        cout << "4... Stopnie Celcjusza na Stopnie Farenheita" << endl;
+        cout << "5... Wyjscie z programu" << endl;
+        cout << endl;
+        cout << "Wybrano: ";
+        cin >> zmienna;
+        switch(zmienna) {
+            case 1:
+                float a, b;
+                cout << "Podaj liczbe [cm]: ";
+                cin >> a;
+                b = a * 0.393700787;
+                cout << b << endl;
+            break;
+            case 2:
+                float c, d;
+                cout << "Podaj liczbe [m]: ";
+                cin >> c;
+                d = c * 3.280839895;
+                cout << d << endl;
+            break;
+            case 3:
+                float e, f;
+                cout << "Podaj liczbe [km]: ";
+                cin >> e;
+                f = e * 0.621371192;
+                cout << f << endl;
+            break;
+            case 4: 
+                float g, h;
+                cout << "Podaj liczbe [°C]: ";
+                cin >> g;
+                h = (g * 1.8) + 32;
+                cout << h << endl;
+            break;
+            case 5: 
+                return 0;
+            break;
+            default: 
+                cout << "Nie ma takiej opcji!" << endl;
+            break;
+        }
+    }
+    return 0;
+}
